@@ -1,0 +1,5 @@
+{
+  "name": "Sample API app",
+  "description": "App designed to create simple test apis",
+  "image": "heroku/ruby"
+}
