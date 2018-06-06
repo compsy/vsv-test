@@ -1,2 +1,2 @@
 FROM heroku/ruby
-CMD "rackup"
+CMD "ruby app/app.rb"
