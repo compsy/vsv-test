@@ -8,10 +8,10 @@ post '/api/v1/response' do
   request.body.rewind  
   raw_data = request.body.read
   data = JSON.parse raw_data
-  halt 400, 'response_id required' unless data.has_key? 'response_id'
+  halt 400, 'uuid required' unless data.has_key? 'uuid'
   halt 400, 'content required' unless data.has_key? 'content'
   halt 400, 'content has to be a hash' unless data['content'].is_a? Hash
-  halt 400, 'Response not found' unless data['response_id'] == '5b48bb2c-6003-4d11-9bbb-8a33fa8a6e51' || data['response_id'] == '3dd5e6e4-89e6-4f30-a271-dfe5ebb06980'
+  halt 400, 'Response not found' unless data['uuid'] == '5b48bb2c-6003-4d11-9bbb-8a33fa8a6e51' || data['uuid'] == '3dd5e6e4-89e6-4f30-a271-dfe5ebb06980'
   raw_data
 end
 
